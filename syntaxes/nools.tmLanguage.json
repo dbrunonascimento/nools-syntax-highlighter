@@ -16,6 +16,9 @@
     },
     {
       "include": "#support"
+    },
+    {
+      "include": "#comment"
     }
   ],
   "repository": {
@@ -31,7 +34,7 @@
           "comment": "Mathmatical operators"
         },
         {
-          "match": "\\b(agenda-group|autoFocus|focus|salience|activationRecency|factRecency|bucketCounter|import|salience|rule|when|then|define|function|global|halt|not|in|or|and|exists|from|new)\\b",
+          "match": "\\b(agenda-group|constructor|autoFocus|focus|salience|activationRecency|factRecency|bucketCounter|import|salience|rule|when|then|define|function|global|halt|not|in|or|and|exists|from|new)\\b",
           "name": "keyword.control.source.nools",
           "comment": "Nools soft keywords"
         }
@@ -58,6 +61,21 @@
         {
           "match": "\\b([A-Z][A-Za-z_]+)\\b",
           "name": "support.type.source.nools"
+        }
+      ]
+    },
+    "comment": {
+      "patterns": [
+        {
+          "begin": "/\\*",
+          "end": "\\*/",
+          "name": "comment.line.double-slash.source.nools",
+          "comment": "Multi line comment"
+        },
+        {
+          "match": "(\\/)(\\/).*",
+          "name": "comment.line.double-slash.source.nools",
+          "comment": "Single line comment"
         }
       ]
     },
