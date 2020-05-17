@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>.nools</string>
+	</array>
+	<key>name</key>
+	<string>Nools</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Mathmatical operators</string>
+			<key>match</key>
+			<string>[&lt;|&gt;|==|&lt;=|&gt;=|.|!=]</string>
+			<key>name</key>
+			<string>keyword.operator.source.nools</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Nools Flow Events</string>
+			<key>match</key>
+			<string>\b(assert|fire|retract|modify)\b</string>
+			<key>name</key>
+			<string>entity.name.function.source.nools</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Nools hard keywords</string>
+			<key>match</key>
+			<string>\b(true|false|null)\b</string>
+			<key>name</key>
+			<string>constant.language.source.nools</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Nools soft keywords</string>
+			<key>match</key>
+			<string>\b(agenda-group|autoFocus|focus|salience|activationRecency|factRecency|bucketCounter|import|salience|rule|when|then|define|function|global|halt|not|in|or|and|exists|from|new)\b</string>
+			<key>name</key>
+			<string>keyword.control.source.nools</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Bound variables like $person, $myList</string>
+			<key>match</key>
+			<string>\$([A-Za-z][A-Za-z0-9_]+)</string>
+			<key>name</key>
+			<string>variable.parameter.source.nools</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Classes</string>
+			<key>match</key>
+			<string>\b([A-Z][A-Za-z_]+)\b</string>
+			<key>name</key>
+			<string>support.type.source.nools</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Single line comment</string>
+			<key>match</key>
+			<string>(\/)(\/).*</string>
+			<key>name</key>
+			<string>comment.line.double-slash.source.nools</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>comment</key>
+			<string>Multi line comment</string>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.line.double-slash.source.nools</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Double quote strings</string>
+			<key>match</key>
+			<string>(").*(")</string>
+			<key>name</key>
+			<string>string.quoted.double.source.nools</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Numbers</string>
+			<key>match</key>
+			<string>([0-9]+(\.)?[0-9]*)</string>
+			<key>name</key>
+			<string>constant.numeric.source.nools</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.nools</string>
+	<key>uuid</key>
+	<string>70E91676-DE0A-4266-A2B9-3AD2E535E484</string>
+</dict>
+</plist>

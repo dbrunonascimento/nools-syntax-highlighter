@@ -1,0 +1,51 @@
+{
+  "name": "nools-syntax-highlighter",
+  "version": "1.0.0",
+  "description": "Nools DSL syntax highlighting",
+  "main": "index.js",
+  "publisher": "dbrunonascimento",
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "nools",
+        "aliases": [
+          "Nools DSL", "nools dsl"
+        ],
+        "extensions": [
+          ".nools"
+        ],
+        "configuration": "./nools.configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "nools",
+        "scopeName": "source.nools",
+        "path": "./syntaxes/nools.tmLanguage"
+      }
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vsce": "node_modules/.bin/vsce"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbrunonascimento/nools-syntax-highlighter.git"
+  },
+  "author": "",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/dbrunonascimento/nools-syntax-highlighter/issues"
+  },
+  "homepage": "https://github.com/dbrunonascimento/nools-syntax-highlighter#readme",
+  "devDependencies": {
+    "vsce": "^1.75.0"
+  }
+}
