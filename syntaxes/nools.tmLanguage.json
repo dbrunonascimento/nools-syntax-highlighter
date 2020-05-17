@@ -1,60 +1,82 @@
 {
-	"name": "Nools",
-	"scopeName": "source.nools",
-	"fileTypes": [".nools"],
-	"uuid": "",
-
-	"patterns": [
-		{
-			"match": "[<|>|==|<=|>=|.|!=]",
-			"name": "keyword.operator.source.nools",
-			"comment": "Mathmatical operators"
-		},
-		{
-			"match": "\\b(iassert|fire|retract|modify)\\b",
-			"name": "entity.name.function.source.nools",
-			"comment": "Nools RHS functions"
-		},
-		{
-			"match": "\\b(true|false|null)\\b",
-			"name": "constant.language.source.nools",
-			"comment": "Nools hard keywords"
-		},
-		{
-			"match": "\\b(agenda-group|autoFocus|focus|salience|activationRecency|factRecency|bucketCounter)\\b",
-			"name": "keyword.control.source.nools",
-			"comment": "Nools soft keywords"
-		},
-		{
-			"match": "\\$([A-Za-z][A-Za-z0-9_]+)",
-			"name": "variable.parameter.source.nools",
-			"comment": "Bound variables like $person, $myList"
-		},
-		{
-			"match": "\\b([A-Z][A-Za-z_]+)\\b",
-			"name": "support.type.source.nools",
-			"comment": "Classes"
-		},
-		{
-			"match": "(\\/)(\\/).*",
-			"name": "comment.line.double-slash.source.nools",
-			"comment": "Single line comment"
-		},
-		{
-			"begin": "/\\*",
-			"end": "\\*/",
-			"name": "comment.line.double-slash.source.nools",
-			"comment": "Multi line comment"
-		},
-		{
-			"match": "(\").*(\")",
-			"name": "string.quoted.double.source.nools",
-			"comment": "Double quote strings"
-		},
-		{
-			"match": "([0-9]+(\\.)?[0-9]*)",
-			"name": "constant.numeric.source.nools",
-			"comment": "Numbers"
-		}
-	]
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Nools DSL",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#entity"
+    },
+    {
+      "include": "#variable"
+    },
+    {
+      "include": "#support"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.nools",
+          "match": "\\b(if|while|for|return)\\b"
+        },
+        {
+          "match": "[<|>|==|<=|>=|.|!=]",
+          "name": "keyword.operator.source.nools",
+          "comment": "Mathmatical operators"
+        },
+        {
+          "match": "\\b(agenda-group|autoFocus|focus|salience|activationRecency|factRecency|bucketCounter|import|salience|rule|when|then|define|function|global|halt|not|in|or|and|exists|from|new)\\b",
+          "name": "keyword.control.source.nools",
+          "comment": "Nools soft keywords"
+        }
+      ]
+    },
+    "variable": {
+      "patterns": [
+        {
+          "match": "\\$([A-Za-z][A-Za-z0-9_]+)",
+          "name": "variable.parameter.source.nools"
+        }
+      ]
+    },
+    "entity": {
+      "patterns": [
+        {
+          "match": "\\b(assert|fire|retract|modify)\\b",
+          "name": "entity.name.function.source.nools"
+        }
+      ]
+    },
+    "support": {
+      "patterns": [
+        {
+          "match": "\\b([A-Z][A-Za-z_]+)\\b",
+          "name": "support.type.source.nools"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.nools",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.nools",
+          "match": "\\\\."
+        },
+        {
+          "match": "([0-9]+(\\.)?[0-9]*)",
+          "name": "constant.numeric.source.nools",
+          "comment": "Numbers"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.nools"
 }

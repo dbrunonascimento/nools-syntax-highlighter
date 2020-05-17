@@ -1,50 +1,40 @@
 {
   "name": "nools-syntax-highlighter",
-  "version": "1.0.0",
-  "description": "Nools DSL syntax highlighting",
-  "main": "index.js",
+  "displayName": "Nools Syntax Highlighter",
+  "description": "Nools DSL Syntax Highlighter",
+  "version": "0.0.1",
   "publisher": "dbrunonascimento",
   "engines": {
-    "vscode": "^0.10.1"
+    "vscode": "^1.40.0"
   },
   "categories": [
     "Programming Languages"
   ],
+  "scripts": {
+    "vsce": "node_modules/.bin/vsce"
+  },
   "contributes": {
     "languages": [
       {
         "id": "nools",
         "aliases": [
-          "Nools DSL", "nools dsl"
+          "Nools DSL",
+          "nools"
         ],
         "extensions": [
           ".nools"
         ],
-        "configuration": "./nools.configuration.json"
+        "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
         "language": "nools",
         "scopeName": "source.nools",
-        "path": "./syntaxes/nools.tmLanguage"
+        "path": "./syntaxes/nools.tmLanguage.json"
       }
     ]
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "vsce": "node_modules/.bin/vsce"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dbrunonascimento/nools-syntax-highlighter.git"
-  },
-  "author": "",
-  "license": "Apache 2",
-  "bugs": {
-    "url": "https://github.com/dbrunonascimento/nools-syntax-highlighter/issues"
-  },
-  "homepage": "https://github.com/dbrunonascimento/nools-syntax-highlighter#readme",
   "devDependencies": {
     "vsce": "^1.75.0"
   }
