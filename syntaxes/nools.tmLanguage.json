@@ -34,7 +34,7 @@
           "comment": "Mathmatical operators"
         },
         {
-          "match": "\\b(agenda-group|constructor|autoFocus|focus|salience|activationRecency|factRecency|bucketCounter|import|salience|rule|when|then|define|function|global|halt|not|in|or|and|exists|from|new)\\b",
+          "match": "\\b(activationRecency|agenda-group|and|autoFocus|bucketCounter|constructor|define|emit|exists|factRecency|focus|from|function|global|halt|import|in|new|not|or|rule|salience|salience|then|when)\\b",
           "name": "keyword.control.source.nools",
           "comment": "Nools soft keywords"
         }
